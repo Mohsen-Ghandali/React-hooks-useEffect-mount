@@ -3,9 +3,11 @@ import { useEffect, useState } from "react";
 const App = () => {
 const [counter,setCounter]=useState(0)
 const [person,setPerson]=useState("")
+ 
  useEffect(()=>{
   console.log("trigger counter");
  },[counter,person])
+ 
   return (
     <>
       <div className=" col-6 offset-3 p-5 bg-dark text-white mt-2 ">
@@ -16,7 +18,6 @@ const [person,setPerson]=useState("")
         
         <input type="text" className="form-control" placeholder="write here" onChange={(e) => setPerson(e.target.value)} />
 
-   
       </div>
     </>
   );
